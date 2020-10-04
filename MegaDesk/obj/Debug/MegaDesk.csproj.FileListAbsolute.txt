@@ -1,0 +1,13 @@
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csprojAssemblyReference.cache
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.AddQuote.resources
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.MainMenu.resources
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.Properties.Resources.resources
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csproj.GenerateResource.cache
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csproj.CoreCompileInputs.cache
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\bin\Debug\MegaDesk.exe.config
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\bin\Debug\MegaDesk.exe
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\bin\Debug\MegaDesk.pdb
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.exe
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.pdb
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.SearchQuotes.resources
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.ViewAllQuotes.resources
