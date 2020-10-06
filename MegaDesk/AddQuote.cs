@@ -16,6 +16,16 @@ namespace MegaDesk
         {
             InitializeComponent();
 
+            this.widthUpDown.Minimum = Desk.MIN_WIDTH;
+            this.widthUpDown.Maximum = Desk.MAX_WIDTH;
+
+            this.depthUpDown.Minimum = Desk.MIN_DEPTH;
+            this.depthUpDown.Maximum = Desk.MAX_DEPTH;
+
+            this.drawersUpDown.Minimum = Desk.MIN_DRAWERS;
+            this.drawersUpDown.Maximum = Desk.MAX_DRAWERS;
+
+
             // populate SurfaceMaterial combo box
             List<DesktopMaterial> materials = Enum.GetValues(typeof(DesktopMaterial))
                                                 .Cast<DesktopMaterial>()

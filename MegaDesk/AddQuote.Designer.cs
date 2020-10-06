@@ -34,18 +34,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.widthUpDown = new System.Windows.Forms.NumericUpDown();
+            this.depthUpDown = new System.Windows.Forms.NumericUpDown();
             this.cmbSurfaceMaterial = new System.Windows.Forms.ComboBox();
             this.cmbDelivery = new System.Windows.Forms.ComboBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.drawersUpDown = new System.Windows.Forms.NumericUpDown();
             this.btnAddQuote = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depthUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drawersUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -103,45 +103,45 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Number of Drawer";
             // 
-            // numericUpDown1
+            // widthUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(164, 142);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.widthUpDown.Location = new System.Drawing.Point(164, 142);
+            this.widthUpDown.Maximum = new decimal(new int[] {
             96,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.widthUpDown.Minimum = new decimal(new int[] {
             24,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(163, 26);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.widthUpDown.Name = "widthUpDown";
+            this.widthUpDown.Size = new System.Drawing.Size(163, 26);
+            this.widthUpDown.TabIndex = 6;
+            this.widthUpDown.Value = new decimal(new int[] {
             24,
             0,
             0,
             0});
             // 
-            // numericUpDown2
+            // depthUpDown
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(164, 190);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.depthUpDown.Location = new System.Drawing.Point(164, 190);
+            this.depthUpDown.Maximum = new decimal(new int[] {
             48,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.depthUpDown.Minimum = new decimal(new int[] {
             12,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(163, 26);
-            this.numericUpDown2.TabIndex = 7;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.depthUpDown.Name = "depthUpDown";
+            this.depthUpDown.Size = new System.Drawing.Size(163, 26);
+            this.depthUpDown.TabIndex = 7;
+            this.depthUpDown.Value = new decimal(new int[] {
             12,
             0,
             0,
@@ -163,17 +163,17 @@
             this.cmbDelivery.Size = new System.Drawing.Size(163, 28);
             this.cmbDelivery.TabIndex = 9;
             // 
-            // numericUpDown3
+            // drawersUpDown
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(573, 186);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.drawersUpDown.Location = new System.Drawing.Point(573, 186);
+            this.drawersUpDown.Maximum = new decimal(new int[] {
             7,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(163, 26);
-            this.numericUpDown3.TabIndex = 10;
+            this.drawersUpDown.Name = "drawersUpDown";
+            this.drawersUpDown.Size = new System.Drawing.Size(163, 26);
+            this.drawersUpDown.TabIndex = 10;
             // 
             // btnAddQuote
             // 
@@ -220,11 +220,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddQuote);
-            this.Controls.Add(this.numericUpDown3);
+            this.Controls.Add(this.drawersUpDown);
             this.Controls.Add(this.cmbDelivery);
             this.Controls.Add(this.cmbSurfaceMaterial);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.depthUpDown);
+            this.Controls.Add(this.widthUpDown);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -234,9 +234,9 @@
             this.Name = "AddQuote";
             this.Text = "Add Quote";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddQuote_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depthUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drawersUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,11 +250,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown widthUpDown;
+        private System.Windows.Forms.NumericUpDown depthUpDown;
         private System.Windows.Forms.ComboBox cmbSurfaceMaterial;
         private System.Windows.Forms.ComboBox cmbDelivery;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown drawersUpDown;
         private System.Windows.Forms.Button btnAddQuote;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox textBox1;
