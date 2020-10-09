@@ -41,7 +41,7 @@
             this.drawersUpDown = new System.Windows.Forms.NumericUpDown();
             this.btnAddQuote = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtboxName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.widthUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depthUpDown)).BeginInit();
@@ -183,6 +183,7 @@
             this.btnAddQuote.TabIndex = 11;
             this.btnAddQuote.Text = "Add Quote";
             this.btnAddQuote.UseVisualStyleBackColor = true;
+            this.btnAddQuote.Click += new System.EventHandler(this.btnAddQuote_Click);
             // 
             // btnCancel
             // 
@@ -194,12 +195,12 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // textBox1
+            // txtboxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(404, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 26);
-            this.textBox1.TabIndex = 13;
+            this.txtboxName.Location = new System.Drawing.Point(404, 77);
+            this.txtboxName.Name = "txtboxName";
+            this.txtboxName.Size = new System.Drawing.Size(163, 26);
+            this.txtboxName.TabIndex = 13;
             // 
             // label7
             // 
@@ -217,7 +218,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtboxName);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddQuote);
             this.Controls.Add(this.drawersUpDown);
@@ -257,7 +258,7 @@
         private System.Windows.Forms.NumericUpDown drawersUpDown;
         private System.Windows.Forms.Button btnAddQuote;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtboxName;
         private System.Windows.Forms.Label label7;
     }
 }

@@ -25,13 +25,79 @@ namespace MegaDesk
         // Properties
         private const decimal BASIC_DESK_PRICE = 200.00M;
         private const decimal SURFACE_AREA_COST = 1.00M;
+        private const decimal DRAWER_COST = 50.00M;
 
-        public decimal GetQuotePrice()
+        private const decimal OAK_COST = 200.00M;
+        private const decimal LAMINATE_COST = 100.00M;
+        private const decimal PINE_COST = 50.00M;
+        private const decimal ROSEWOOD_COST = 300.00M;
+        private const decimal VENEER_COST = 125.00M;
+
+        private const decimal RUSH_3DAYS = 60.00M;
+        private const decimal RUSH_5DAYS = 40.00M;
+        private const decimal RUSH_7DAYS = 30.00M;
+
+        public decimal getRushOrderPrice()
         {
+            decimal rushPrice = 0;
+            
+            if (this.Delievery == Delivery.Rush3days)
+            {
+                rushPrice = RUSH_3DAYS;
+            }
+            else if (this.Delievery == Delivery.Rush5days)
+            {
+                rushPrice = RUSH_5DAYS;
+            }
+            else if (this.Delievery == Delivery.Rush7days)
+            {
+                rushPrice = RUSH_7DAYS;
+            }
+            else
+            {
+                rushPrice = 0;
+            }
             
 
+            return rushPrice;
+        }
+        public decimal GetQuotePrice()
+        {
+            decimal cost = BASIC_DESK_PRICE;
+            decimal DesktopSurfaceArea = this.Desk.Width * this.Desk.Depth;
+
+            // desk surface area
+            if (DesktopSurfaceArea > 1000)
+            {
+                cost =+ (DesktopSurfaceArea - 1000) * SURFACE_AREA_COST;
+            }
+
+            // surface material cost
+            if (this.Desk.SurfaceMaterial == DesktopMaterial.Oak)
+            {
+                cost += OAK_COST;
+            }
+            else if (this.Desk.SurfaceMaterial == DesktopMaterial.Laminate) {
+                cost += LAMINATE_COST;
+            }
+            else if (this.Desk.SurfaceMaterial == DesktopMaterial.Pine)
+            {
+                cost += PINE_COST;
+            }
+            else if (this.Desk.SurfaceMaterial == DesktopMaterial.Rosewood)
+            {
+                cost += ROSEWOOD_COST;
+            }
+            else if (this.Desk.SurfaceMaterial == DesktopMaterial.Veneer)
+            {
+                cost += VENEER_COST;
+            }
+
+            cost += GetQuotePrice();
 
 
+            return cost;
+            
         }
 
     }

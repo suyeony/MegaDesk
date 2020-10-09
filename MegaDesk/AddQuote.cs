@@ -55,7 +55,7 @@ namespace MegaDesk
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-     
+
         }
 
 
@@ -64,6 +64,28 @@ namespace MegaDesk
         {
             Form mainMenu = (Form)this.Tag;
             mainMenu.Show();
+        }
+
+        private void btnAddQuote_Click(object sender, EventArgs e)
+        {
+            // create desk class
+            Desk desk = new Desk();
+            desk.Width = (int)this.widthUpDown.Value;
+            desk.Depth = (int)this.depthUpDown.Value;
+            desk.NumberOfDrawers = (int)this.drawersUpDown.Value;
+            desk.SurfaceMaterial = (DesktopMaterial)this.cmbSurfaceMaterial.SelectedItem;
+
+            // create desk quote class
+            DeskQuote deskQuote = new DeskQuote();
+            deskQuote.CustomerName = this.txtboxName.Text;
+            deskQuote.Desk = desk;
+            deskQuote.Delievery = (Delivery)this.cmbDelivery.SelectedItem;
+
+            deskQuote.GetQuotePrice();
+
+            //private void addQuoteToFile(DeskQuote) {
+
+            //}
         }
     }
 }
