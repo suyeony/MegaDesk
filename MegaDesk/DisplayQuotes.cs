@@ -16,5 +16,10 @@ namespace MegaDesk
         {
             InitializeComponent();
         }
+
+        private void DisplayQuotes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

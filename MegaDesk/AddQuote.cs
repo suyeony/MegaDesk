@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace MegaDesk
 {
@@ -52,12 +54,7 @@ namespace MegaDesk
 
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
-
+        
 
 
         private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
@@ -79,13 +76,110 @@ namespace MegaDesk
             DeskQuote deskQuote = new DeskQuote();
             deskQuote.CustomerName = this.txtboxName.Text;
             deskQuote.Desk = desk;
+            deskQuote.QuoteDate = DateTime.Now;
             deskQuote.Delievery = (Delivery)this.cmbDelivery.SelectedItem;
 
-            deskQuote.GetQuotePrice();
+            try
+            {
+                // get quote price
+                var price = deskQuote.GetQuotePrice();
+                // deskQuote price
+                deskQuote.QuotePrice = price;
+                // add quote to file
+                addQuoteToFile(deskQuote);
+                //addQuoteToFile(deskQuote);
 
-            //private void addQuoteToFile(DeskQuote) {
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("There is an error when you create a quote. {0}",
+                    err.InnerException.ToString());
+            }
+   
+            var displayQuote = new DisplayQuotes();
+            displayQuote.Tag = this;
+            displayQuote.Show();
+            this.Hide();
+            
 
-            //}
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void addQuoteToFile(DeskQuote deskQuote) {
+           // create a quote file 
+            var quotesFile = @"quote.json";
+            List<DeskQuote> deskQuotes = new List<DeskQuote>();
+
+            // read json files first
+            if (File.Exists(quotesFile))
+            {             
+                using (StreamReader reader = new StreamReader(quotesFile))
+                {
+                    string quotes = reader.ReadToEnd();
+
+                    // check if quotes list is not empty
+                    if (quotes.Length > 0)
+                    {
+                        // Deserializing desk quotes list
+                        deskQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(quotes);
+                    }
+                }
+            }
+
+            // add a new quote
+            deskQuotes.Add(deskQuote);
+
+            // Save a quote to a json file
+            saveQuote(deskQuotes);
+
+        }
+
+        private void saveQuote(List<DeskQuote> deskQuotes)
+        {
+            var quotesFile = @"quote.json";
+            // write quotes in the json files
+
+            string JSONResult = JsonConvert.SerializeObject(deskQuotes);
+            using (StreamWriter writer = new StreamWriter(quotesFile))
+            {
+                writer.WriteLine(JSONResult.ToString());
+                writer.Close();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddQuote_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
+

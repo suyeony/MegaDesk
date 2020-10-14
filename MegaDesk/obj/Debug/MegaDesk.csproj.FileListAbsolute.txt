@@ -11,3 +11,6 @@ C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.exe
 C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.pdb
 C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.SearchQuotes.resources
 C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.ViewAllQuotes.resources
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Suyeon Yang\source\repos\MegaDesk\MegaDesk\obj\Debug\MegaDesk.csproj.CopyComplete

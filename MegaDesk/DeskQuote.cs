@@ -21,6 +21,7 @@ namespace MegaDesk
         public String CustomerName { get; set; }
         public DateTime QuoteDate { get; set; }
         public Delivery Delievery { get; set; }
+        public decimal QuotePrice { get; set; }
 
         // Properties
         private const decimal BASIC_DESK_PRICE = 200.00M;
@@ -69,35 +70,36 @@ namespace MegaDesk
             // desk surface area
             if (DesktopSurfaceArea > 1000)
             {
-                cost =+ (DesktopSurfaceArea - 1000) * SURFACE_AREA_COST;
+                cost += (DesktopSurfaceArea - 1000) * SURFACE_AREA_COST;
             }
 
             // surface material cost
-            if (this.Desk.SurfaceMaterial == DesktopMaterial.Oak)
+            switch (this.Desk.SurfaceMaterial)
             {
-                cost += OAK_COST;
-            }
-            else if (this.Desk.SurfaceMaterial == DesktopMaterial.Laminate) {
-                cost += LAMINATE_COST;
-            }
-            else if (this.Desk.SurfaceMaterial == DesktopMaterial.Pine)
-            {
-                cost += PINE_COST;
-            }
-            else if (this.Desk.SurfaceMaterial == DesktopMaterial.Rosewood)
-            {
-                cost += ROSEWOOD_COST;
-            }
-            else if (this.Desk.SurfaceMaterial == DesktopMaterial.Veneer)
-            {
-                cost += VENEER_COST;
+                case DesktopMaterial.Oak:
+                    cost += OAK_COST;
+                    break;
+                case DesktopMaterial.Laminate:
+                    cost += LAMINATE_COST;
+                    break;
+                case DesktopMaterial.Pine:
+                    cost += PINE_COST;
+                    break;
+                case DesktopMaterial.Rosewood:
+                    cost += ROSEWOOD_COST;
+                    break;
+                case DesktopMaterial.Veneer:
+                    cost += VENEER_COST;
+                    break;
             }
 
-            cost += GetQuotePrice();
-
-
-            return cost;
+            // Drawer cost
+            cost += (Desk.NumberOfDrawers * 50);
             
+            // Delivery cost
+            cost += getRushOrderPrice();
+
+            return cost;           
         }
 
     }
