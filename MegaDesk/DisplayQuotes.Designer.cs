@@ -41,7 +41,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.DisplayDelivery = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAddQuote = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.DisplayPrice = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -164,14 +164,15 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "New Quote";
             // 
-            // btnAddQuote
+            // btnClose
             // 
-            this.btnAddQuote.Location = new System.Drawing.Point(306, 368);
-            this.btnAddQuote.Name = "btnAddQuote";
-            this.btnAddQuote.Size = new System.Drawing.Size(163, 36);
-            this.btnAddQuote.TabIndex = 16;
-            this.btnAddQuote.Text = "Add Quote";
-            this.btnAddQuote.UseVisualStyleBackColor = true;
+            this.btnClose.Location = new System.Drawing.Point(306, 368);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(163, 36);
+            this.btnClose.TabIndex = 16;
+            this.btnClose.Text = "close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label3
             // 
@@ -198,7 +199,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DisplayPrice);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnAddQuote);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DisplayDelivery);
             this.Controls.Add(this.label10);
@@ -214,7 +215,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DisplayQuotes";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.DisplayQuotes_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DisplayQuotes_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,7 +236,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label DisplayDelivery;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAddQuote;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label DisplayPrice;
     }

@@ -49,14 +49,6 @@ namespace MegaDesk
             cmbDelivery.SelectedIndex = -1;
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-
         private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form mainMenu = (Form)this.Tag;
@@ -78,13 +70,10 @@ namespace MegaDesk
             deskQuote.Desk = desk;
             deskQuote.QuoteDate = DateTime.Now;
             deskQuote.Delievery = (Delivery)this.cmbDelivery.SelectedItem;
+            deskQuote.QuotePrice = deskQuote.GetQuotePrice();
 
             try
             {
-                // get quote price
-                var price = deskQuote.GetQuotePrice();
-                // deskQuote price
-                deskQuote.QuotePrice = price;
                 // add quote to file
                 addQuoteToFile(deskQuote);
                 //addQuoteToFile(deskQuote);
@@ -99,6 +88,7 @@ namespace MegaDesk
             var displayQuote = new DisplayQuotes();
             displayQuote.Tag = this;
             displayQuote.Show();
+            //displayQuote.DisplayQuote(deskQuote);
             this.Hide();
             
 
@@ -149,31 +139,6 @@ namespace MegaDesk
                 writer.WriteLine(JSONResult.ToString());
                 writer.Close();
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void AddQuote_Load(object sender, EventArgs e)

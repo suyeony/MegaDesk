@@ -56,7 +56,6 @@
             this.label1.Size = new System.Drawing.Size(124, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Customer Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -66,7 +65,6 @@
             this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Width";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -76,7 +74,6 @@
             this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Depth";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -86,7 +83,6 @@
             this.label4.Size = new System.Drawing.Size(64, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Delivery";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -96,7 +92,6 @@
             this.label5.Size = new System.Drawing.Size(65, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Material";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -106,7 +101,6 @@
             this.label6.Size = new System.Drawing.Size(138, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Number of Drawer";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // widthUpDown
             // 
